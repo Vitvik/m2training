@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--Task_1.9-->
+    <!--<type name="Magento\Catalog\Controller\Product\View">-->
+        <!--<plugin name="training_test_around" type="Training\TestAround\Plugin\Controller\Product\View"/>-->
+    <!--</type>-->
+</config>
