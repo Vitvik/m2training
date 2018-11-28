@@ -135,9 +135,10 @@ return [
         'Training_TestAround' => 0,
         'Training_TestBlock' => 0,
         'Training_TestDescription' => 0,
-        'Training_TestJs' => 1,
+        'Training_TestJs' => 0,
         'Training_AdditionalTestDI' => 0,
         'Training_TestRedirect' => 0,
+        'Training_Webpos' => 1,
         'Vertex_Tax' => 1
     ]
 ];
