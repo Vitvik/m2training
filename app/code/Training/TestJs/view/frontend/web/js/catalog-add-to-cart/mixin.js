@@ -9,7 +9,7 @@ define([
 
         $.widget('mage.catalogAddToCart', widget, {
             submitForm: function (form) {
-                if (confirm($t('Are yuo sure?'))) {
+                if (confirm($t('Are you sure?'))) {
                     this._super(form);
                 } else {
                     return false;
