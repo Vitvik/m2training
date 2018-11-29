@@ -10,6 +10,7 @@ define(
         return Component.extend({
 
             getListCustomers : function(){
+
                 if(!listCustomers().length) {
                     jQuery.ajax({
                         url: 'http://louis.com/public_html/magento2/index.php/webpos/index/customerList',
