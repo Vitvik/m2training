@@ -138,6 +138,7 @@ return [
         'Training_TestJs' => 0,
         'Training_AdditionalTestDI' => 0,
         'Training_TestRedirect' => 0,
+        'Training_UiComp' => 0,
         'Training_Webpos' => 1,
         'Vertex_Tax' => 1
     ]

@@ -10,14 +10,14 @@ class Lists extends \Magento\Framework\View\Element\Template
     protected $customer;
 
     public function __construct(
-        \Magento\Customer\Model\Customer $customers,
+       \Magento\Customer\Model\CustomerFactory $customerFactory,
         \Magento\Framework\View\Element\Template\Context $context,
         array $layoutProcessors = [],
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->layoutProcessors = $layoutProcessors;
-        $this->customer = $customers;
+        $this->customer = $customerFactory;
     }
 
     public function getJsLayout()
@@ -29,24 +29,28 @@ class Lists extends \Magento\Framework\View\Element\Template
     }
 
     public function getCustomerCollection(){
-        return $this->customer->getCollection()
-//        ->addAttributeToSelect([
-//            'entity_id',
-//            'email',
-//            'firstname',
-//            'lastname',
-//            'created_at'
-//        ])
-        ->load();
+        return $this->customer->create()
+           ->getCollection();
     }
 
     public function output(){
+        $attribute =[
+            'entity_id',
+            'email',
+            'firstname',
+            'lastname',
+            'created_at'
+        ];
        $customers = [];
-        foreach ($this->getCustomerCollection() as $customer){
-            $customers[] = $customer->getData();
-
+        foreach ($this->getCustomerCollection() as  $customer){
+            $k =  $customer->getData();
+            foreach ($k as $key => $value) {
+                if (in_array($key, $attribute)) {
+                    $customers[][$key] = $value;
+                }
+            }
         }
-        return $customers;
+        return json_encode($customers);
     }
 
 }
