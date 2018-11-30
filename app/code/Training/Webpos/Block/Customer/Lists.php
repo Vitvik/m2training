@@ -51,7 +51,8 @@ class Lists extends \Magento\Framework\View\Element\Template
             }
             $arr[]= $customers;
         }
-        return json_encode($arr);
+       // return json_encode($arr);
+        return $arr;
     }
 
 }
