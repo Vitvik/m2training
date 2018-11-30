@@ -46,11 +46,12 @@ class Lists extends \Magento\Framework\View\Element\Template
             $k =  $customer->getData();
             foreach ($k as $key => $value) {
                 if (in_array($key, $attribute)) {
-                    $customers[][$key] = $value;
+                    $customers[$key] = $value;
                 }
             }
+            $arr[]= $customers;
         }
-        return json_encode($customers);
+        return json_encode($arr);
     }
 
 }
