@@ -129,17 +129,17 @@ return [
         'Training_AdditionalTestOM' => 0,
         'Training_Dependency2' => 0,
         'Training_Dependency' => 0,
+        'Training_JsBlock' => 1,
         'Training_Render' => 0,
         'Training_Test' => 0,
         'Training_TestAjax' => 0,
         'Training_TestAround' => 0,
         'Training_TestBlock' => 0,
         'Training_TestDescription' => 0,
-        'Training_TestJs' => 0,
+        'Training_TestJs' => 1,
         'Training_AdditionalTestDI' => 0,
         'Training_TestRedirect' => 0,
-        'Training_UiComp' => 0,
-        'Training_Webpos' => 1,
+        'Training_Webpos' => 0,
         'Vertex_Tax' => 1
     ]
 ];
