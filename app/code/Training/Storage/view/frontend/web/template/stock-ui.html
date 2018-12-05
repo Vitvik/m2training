@@ -1,0 +1,8 @@
+<div>
+    <div data-bind="visible: visible()">
+        <span data-bind="i18n: 'Available quantity: '"></span>
+        <span data-bind="text: quantity()"></span>
+    </div>
+    </br>
+    <button class="action primary" data-bind="i18n: 'Show available quantity', click: getQuantity"></button>
+</div>

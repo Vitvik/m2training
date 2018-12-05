@@ -1,0 +1,27 @@
+<?php $viewModel = $block->getViewModel();
+$productId = $viewModel->getCurrentProductId();
+?>
+<div data-bind="scope: 'stockUiComponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+                "Magento_Ui/js/core/app":{
+                    "components": {
+                        "stockUiComponent": {
+                            "component": "Training_Storage/js/stock-ui",
+                            "config": {
+                                "template": "Training_Storage/stock-ui",
+                                "productId": <?= json_encode($productId) ?>,
+                                 "url": <?= json_encode($block->getUrl('storage/index/json')) ?>
+                            }
+                        }
+                    }
+                }
+        }
+    }
+</script>
+
+
