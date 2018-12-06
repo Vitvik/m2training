@@ -21,9 +21,11 @@ class Json extends \Magento\Framework\App\Action\Action
     public function execute()
     {
         $result = $this->jsonResultFactory->create();
+        if($this->getRequest()->isAjax()) {
             $productId = $this->getRequest()->getParam('id');
             $result->setData($this->stockState->getStockQty($productId));
             return $result;
+        }
     }
 
 }
