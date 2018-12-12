@@ -13,7 +13,7 @@ define([
             additionalData['additional_data'] = [];
             additionalData['additional_data'] ['printed-invoice'] =
              $('#printed-invoice').prop('checked');
-
+             console.log(additionalData);
 
             paymentData = _.extend(paymentData, additionalData);
             return originalAction(paymentData, messageContainer);
