@@ -127,6 +127,7 @@ return [
         'Temando_Shipping' => 1,
         'Training_TestOM' => 0,
         'Training_AdditionalTestOM' => 0,
+        'Training_CustomerPersonalSite' => 1,
         'Training_Dependency2' => 0,
         'Training_Dependency' => 0,
         'Training_Feedback' => 1,
