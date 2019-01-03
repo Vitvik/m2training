@@ -12,12 +12,11 @@
                 <class>primary</class>
                 <label translate="true">Add New Feedback</label>
             </button>
-            <!--<button name="delete">-->
-                <!--<class>Training\Feedback\Block\Adminhtml\Feedback\Edit\DeleteButton</class>-->
-                <!--<label translate="true">Delete</label>-->
-            <!--</button>-->
-            <!--<button name="back"-->
-                    <!--class="Training\Feedback\Block\Adminhtml\Feedback\Edit\BackButton"/>-->
+            <button name="back">
+                <url path="/"/>
+                <class>back</class>
+                <label translate="true">Back</label>
+            </button>
         </buttons>
         <spinner>feedback_columns</spinner>
         <deps>
