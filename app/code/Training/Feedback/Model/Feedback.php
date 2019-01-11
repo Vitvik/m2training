@@ -1,14 +1,13 @@
 <?php
-
 namespace Training\Feedback\Model;
 
 use Training\Feedback\Api\Data\FeedbackExtensionInterface;
-class Feedback extends \Magento\Framework\Model\AbstractExtensibleModel implements \Training\Feedback\Api\Data\FeedbackInterface
-
+class Feedback
+    extends \Magento\Framework\Model\AbstractExtensibleModel implements \Training\Feedback\Api\Data\FeedbackInterface
 {
     const STATUS_ACTIVE = 1;
     const STATUS_INACTIVE = 0;
-    protected $_eventPrefix = 'training_feedback';
+    protected  $_eventPrefix = 'training_feedback';
     protected  $_eventObject = 'feedback';
 
     protected function _construct()

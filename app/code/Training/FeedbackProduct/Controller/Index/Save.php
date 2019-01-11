@@ -16,15 +16,15 @@ class Save extends \Magento\Framework\App\Action\Action
         \Magento\Framework\App\Action\Context $context,
         \Training\Feedback\Model\FeedbackFactory $feedbackFactory,
         \Training\Feedback\Model\ResourceModel\Feedback $feedbackResource,
-        \Training\FeedbackProduct\Model\FeedbackDataLoader $feedbackDataLoader,
-        \Magento\Framework\Event\Manager $eventManager
+        \Training\FeedbackProduct\Model\FeedbackDataLoader $feedbackDataLoader
+  //      \Magento\Framework\Event\Manager $eventManager
 
     )
     {
         $this->feedbackFactory = $feedbackFactory;
         $this->feedbackResource = $feedbackResource;
         $this->feedbackDataLoader = $feedbackDataLoader;
-        $this->eventManager = $eventManager;
+ //       $this->eventManager = $eventManager;
         parent::__construct($context);
     }
 
@@ -37,15 +37,10 @@ class Save extends \Magento\Framework\App\Action\Action
                 $feedback = $this->feedbackFactory->create();
  //              $feedback->setData($post)->save();        //метод save у моделей помечен как deprecated
                 $feedback->setData($post);
-
-
-
                 $this->setProductsToFeedback($feedback, $post);
-   //             var_dump($feedback->getData('products_skus'));
-    //            exit;
                 $this->feedbackResource->save($feedback);
 
-                $this->eventManager->dispatch('training_feedback_product_save_after');
+ //               $this->eventManager->dispatch('training_feedback_product_save_after', ['feedback' => $feedback]);
                 $this->messageManager->addSuccessMessage(
                     __('Thank you for your feedback.')
                 );

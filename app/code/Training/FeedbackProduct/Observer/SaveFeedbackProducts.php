@@ -18,10 +18,8 @@ class SaveFeedbackProducts implements ObserverInterface
 
     public function execute(Observer $observer)
     {
-//        $feedback = $observer->getData('feedback');
-        $feedback = $observer->getFeedback();
-        var_dump($feedback);
-        exit;
+       // $feedback= $observer->getEvent()->getData('feedback');
+        $feedback= $observer->getEvent()->getFeedback();
         $this->feedbackProducts->saveProductRelations($feedback);
     }
 }
