@@ -58,6 +58,7 @@ interface FeedbackInterface extends \Magento\Framework\Api\ExtensibleDataInterfa
      */
     public function getUpdateTime();
 
+
     public function getExtensionAttributes();
 
     /**
@@ -123,8 +124,10 @@ interface FeedbackInterface extends \Magento\Framework\Api\ExtensibleDataInterfa
      */
     public function setIsActive($isActive);
 
+
+
     public function setExtensionAttributes(
-        \Training\Feedback\Api\Data\FeedbackInterface $extensionAttributes
+        \Training\Feedback\Api\Data\FeedbackExtensionInterface $extensionAttributes
     );
 
 

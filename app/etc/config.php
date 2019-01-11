@@ -131,6 +131,7 @@ return [
         'Training_Dependency2' => 0,
         'Training_Dependency' => 0,
         'Training_Feedback' => 1,
+        'Training_FeedbackProduct' => 1,
         'Training_Js' => 1,
         'Training_JsBlock' => 0,
         'Training_Render' => 0,

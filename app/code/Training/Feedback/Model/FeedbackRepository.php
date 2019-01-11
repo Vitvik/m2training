@@ -96,11 +96,6 @@ class FeedbackRepository implements FeedbackRepositoryInterface
         return $feedback;
     }
 
-
-
-
-
-
     /**
      * Load feedback data collection by given search criteria
      *
