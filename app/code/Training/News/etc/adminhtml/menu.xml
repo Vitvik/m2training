@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Training_News::postgrid" title="News (Grid Collection)" translate="title" module="Training_News" sortOrder="14" 
+             parent="Magento_Backend::content_elements" action="training_news/index/indexgrid" resource="Training_News::post"/>
+        <add id="Training_News::post" title="News" translate="title" module="Training_News" sortOrder="15" 
+             parent="Magento_Backend::content_elements" action="training_news/index/index" resource="Training_News::post"/>
+    </menu>
+</config>

@@ -134,6 +134,7 @@ return [
         'Training_FeedbackProduct' => 1,
         'Training_Js' => 1,
         'Training_JsBlock' => 0,
+        'Training_News' => 1,
         'Training_Render' => 0,
         'Training_Storage' => 1,
         'Training_Test' => 0,
